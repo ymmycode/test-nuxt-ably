@@ -1,7 +1,7 @@
 <template>
   <div>
     <QRCodeVue3
-      :value="`http://192.168.0.107:3000/chat`"
+      :value="`https://live-chat-ably-nuxt-test.vercel.app/chat`"
       :width="300"
       :height="300"
       :qrOptions="{ typeNumber: 0, mode: 'Byte', errorCorrectionLevel: 'H' }"
