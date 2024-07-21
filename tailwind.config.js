@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary-1': '#E3E935',
+      },
       screens: {
         'big-screen': '1441px',
         tablet: { raw: '(orientation: portrait) and (min-width: 740px) and (max-width: 1440px)' },

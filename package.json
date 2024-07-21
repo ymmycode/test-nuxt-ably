@@ -10,14 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@dicebear/collection": "^9.0.1",
+    "@dicebear/core": "^9.0.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.13",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
     "ably": "^2.3.0",
+    "indonesian-badwords": "^1.0.1",
+    "lenis": "^1.1.6",
     "nuxt": "^3.12.4",
     "nuxt-booster": "^3.0.16",
     "pinia": "^2.1.7",
+    "qrcode-vue3": "^1.6.8",
     "vue": "latest"
   },
   "overrides": {

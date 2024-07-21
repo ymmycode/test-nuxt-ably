@@ -12,7 +12,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   preset: 'node-server',
   srcDir: './src',
-  modules: ['@nuxtjs/tailwindcss', [
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
+    [
     '@pinia/nuxt',
     {
       autoImports: ['defineStore', 'acceptHMRUpdate', 'useDayjs'],
@@ -49,8 +52,10 @@ export default defineNuxtConfig({
     disableNuxtFontaine: true,
     disableNuxtImage: true,
   },
+
   googleFonts: {
     families: {
+      Unbounded: '200..900',
       Inter: '300..800',
     },
     display: 'swap',
@@ -78,7 +83,21 @@ export default defineNuxtConfig({
     script: './.output/server/index.mjs',
   },
   plugins: [
-    '~/plugins/ably.ts',
+    {
+      src: '~/plugins/ably.ts',
+      ssr: false,
+      mode: 'client',
+    },
+    {
+      src: '~/plugins/qrcode.ts',
+      ssr: false,
+      mode: 'client',
+    },
+    // {
+    //   src: '~/plugins/lenis.ts',
+    //   ssr: false,
+    //   mode: 'client',
+    // },
   ],
   server: {
     port: 3000,

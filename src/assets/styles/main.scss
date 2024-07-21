@@ -17,6 +17,11 @@
   scroll-behavior: initial;
 }
 
+.unbounded {
+  font-family: 'Unbounded', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 *::-webkit-scrollbar-track
 {
 	background-color: #F5F5F500;
@@ -26,16 +31,17 @@
 {
 	width: 6px;
 	background-color: #F5F5F500;
+  display: none;
 }
 
 *::-webkit-scrollbar-thumb
 {
-  @apply bg-blue-400;
+  @apply bg-primary-1;
 }
 
 html, body {
   overscroll-behavior: none;
-  background-color: #f2f2f2;
+  background-color: black;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
   font-family: 'Inter', sans-serif;
@@ -47,7 +53,38 @@ body{
   margin: auto;
 }
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 .full-height {
   height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+// animation
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 

@@ -5,12 +5,17 @@ export const useMainStore = defineStore({
   state: () => {
     return {
       receivedData: null,
+      chatID: null, 
     };
   },
   actions: {
     async setData (payload) {
       this.receivedData = payload;
     },
+
+    async setChatID (payload) {
+      this.chatID = payload;
+    }
   },
 });
 
