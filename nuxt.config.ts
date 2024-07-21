@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-07-21',
   runtimeConfig: {
+    app:{
+      ablyAPIKey: process.env.ABLY_API_KEY,
+    },
     public: {
       port: 3000
     }
@@ -74,6 +77,9 @@ export default defineNuxtConfig({
     instances: 'max',
     script: './.output/server/index.mjs',
   },
+  plugins: [
+    '~/plugins/ably.ts',
+  ],
   server: {
     port: 3000,
     host: '0.0.0.0'

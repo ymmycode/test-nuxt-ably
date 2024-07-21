@@ -1,8 +1,6 @@
 <template>
-  <main>
-    <NuxtLoadingIndicator :color="'#F7941E'" :height="4" />
-    <NuxtPage/>
-  </main>
+  <NuxtLoadingIndicator :color="'#E3E935'" :height="4" />
+  <NuxtPage/>
 </template>
 
 <script setup>
